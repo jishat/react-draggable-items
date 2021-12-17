@@ -1,0 +1,75 @@
+.eachItem{
+  background: #03a9f4;
+  display: inline-block;
+  position: absolute;
+  cursor: move;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.20)!important;
+}
+.eachItem::after{
+  content: "";
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  border: 1px solid #03a9f4;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: none;
+}
+.rightTopCorner{
+  content: "";
+  position: absolute;
+  display: none;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border: 1.5px solid #03a9f4;
+  top: -3px;
+  right: -3px;
+  z-index: 1;
+}
+
+.leftTopCorner{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border: 1.5px solid #03a9f4;
+  top: -3px;
+  left: -3px;
+  z-index: 1;
+  display: none;
+}
+.leftBottomCorner{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border: 1.5px solid #03a9f4;
+  bottom: -3px;
+  left: -3px;
+  z-index: 1;
+  display: none;
+}
+
+.rightBottomCorner{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border: 1.5px solid #03a9f4;
+  bottom: -3px;
+  right: -3px;
+  z-index: 1;
+  display: none;
+}
+.eachItem:hover::after, .eachItem:hover .rightTopCorner, .eachItem:hover .leftTopCorner, .eachItem:hover .leftBottomCorner, .eachItem:hover .rightBottomCorner{
+  display: block;
+}
